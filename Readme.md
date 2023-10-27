@@ -34,11 +34,9 @@ Rendering static content in Django: https://docs.djangoproject.com/en/4.2/howto/
 
 Gunicorn is python's WSGI HTTP server for Unix. It's a pre-frok worker model.
 
-1. Install Gunicorn
-   sudo apt-get update
-   sudo apt-get install gunicorn
-   pip install -I gunicorn
-2. Run server using gunicorn
+Perform above defined steps from 1 to 5. And then execute below steps.
+
+1. Run server using gunicorn
    cd sample_api/
    gunicorn 'sample_api.wsgi:application'
 
@@ -47,7 +45,27 @@ Observation: Gunicorn does not serve static content.
 
 #### Serving Django Application using Ngnix server
 
+This steps you can follow to run Nginx server in Linux platform. Please refer this link for windows platform - https://nginx.org/en/docs/windows.html.
+
 1. Install Ngnix
-2. Configure Ngnix
-3. Open required ports
-4. Run ngnix server
+   sudo apt update
+   sudo apt install nginx
+2. Configure NgnixThe configuration can be found in nginx_v1.config file. Copy its content to /etc/nginx/nginx.conf file.
+3. Run nginx server
+   sudo service nginx start
+
+
+#### Validating
+
+Run below command to test wheter the server is running.
+
+wget http://localhost/test
+
+You will get response like `Running Successfully! `.
+
+
+#### Future Taks
+
+1. Open port 80 and access Django service from internet
+2. Add TLS encryption
+3. Create DNS entry for custom domain
