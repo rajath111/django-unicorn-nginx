@@ -2,7 +2,7 @@
 
 To Create an sample Django Rest API application and deploy it in a Linux server (Gunicorn and Ngnix).
 
-#### Running Using Default Django server
+### Running Using Default Django server
 
 1. Install Python
    For this application install python version 3.8 and above.
@@ -30,7 +30,7 @@ To Create an sample Django Rest API application and deploy it in a Linux server 
 
 Rendering static content in Django: https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#### Running Django application using Gunicorn
+### Running Django application using Gunicorn
 
 Gunicorn is python's WSGI HTTP server for Unix. It's a pre-frok worker model.
 
@@ -43,7 +43,7 @@ Perform above defined steps from 1 to 5. And then execute below steps.
 Observation: Gunicorn does not serve static content.
 
 
-#### Serving Django Application using Ngnix server
+### Serving Django Application using Ngnix server
 
 This steps you can follow to run Nginx server in Linux platform. Please refer this link for windows platform - https://nginx.org/en/docs/windows.html.
 
@@ -55,7 +55,7 @@ This steps you can follow to run Nginx server in Linux platform. Please refer th
    sudo service nginx start
 
 
-#### Validating
+### Validating
 
 Run below command to test wheter the server is running.
 
@@ -64,7 +64,7 @@ wget http://localhost/test
 You will get response like `Running Successfully! `.
 
 
-#### Future Taks
+### Future Taks
 
 1. Open port 80 and access Django service from internet
 2. Add TLS encryption
