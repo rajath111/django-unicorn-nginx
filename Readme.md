@@ -37,4 +37,17 @@ Gunicorn is python's WSGI HTTP server for Unix. It's a pre-frok worker model.
 1. Install Gunicorn
    sudo apt-get update
    sudo apt-get install gunicorn
+   pip install -I gunicorn
 2. Run server using gunicorn
+   cd sample_api/
+   gunicorn 'sample_api.wsgi:application'
+
+Observation: Gunicorn does not serve static content.
+
+
+#### Serving Django Application using Ngnix server
+
+1. Install Ngnix
+2. Configure Ngnix
+3. Open required ports
+4. Run ngnix server
